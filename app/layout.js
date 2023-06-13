@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +12,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex flex-row justify-between pl-10 h-16 bg-neutral-900">
+          <Link href="/" className="flex flex-col text-xl font-bold justify-center">Max Shen</Link>
+          <nav className="flex flex-row">
+            <Link href="/about" className="hover:bg-neutral-700 flex flex-col justify-center px-5 font-semibold transition-colors">About</Link>
+            <Link href="/artworks" className="hover:bg-neutral-700 flex flex-col justify-center px-5 font-semibold transition-colors">Artworks</Link>
+            <Link href="/contact" className="hover:bg-neutral-700 flex flex-col justify-center px-5 font-semibold transition-colors">Contact</Link>
+          </nav>
+        </div>
+        {children}
+      </body>
     </html>
   )
 }
