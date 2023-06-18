@@ -26,13 +26,13 @@ export default function Title() {
   }, []);
 
   return (
-    <div className="w-screen h-80">
+    <div className="w-screen h-40">
       <Canvas>
-        <OrthographicCamera makeDefault position={[0, 0, 1000]} />
+        <OrthographicCamera makeDefault position={[0, 0, 100]} />
         <pointLight intensity={1} position={[0, 0, 100]} />
         <ambientLight intensity={0.1} />
         <Center ref={ref} back>
-          <Text3D font={Inter} bevelEnabled bevelThickness={20} size={100}>
+          <Text3D font={Inter} bevelEnabled bevelThickness={20} size={90}>
             Max Shen
             <meshStandardMaterial />
           </Text3D>
