@@ -13,7 +13,7 @@ export default function Home() {
         </a>
       </div>
       <div className="text-xl font-semibold text-center mt-40">
-        comming soon...
+        coming soon...
       </div>
     </main>
   )
